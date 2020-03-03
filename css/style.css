@@ -15,19 +15,10 @@
 .container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 4fr 4fr 2fr 0.5fr;
+    grid-template-rows: 2fr 2fr 1fr 0.5fr;
     overflow: hidden;
   
   }
-
-  .container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4fr 4fr 0.5fr;
-    overflow: hidden;
-  
-  }
-
 
   header{
     grid-column: 1/span 1;
@@ -43,13 +34,13 @@
 
   }
 
-  #library{
+  #library, #research, #professional, #contact{
     grid-column: 1/span 1;
     grid-row: 1/span 1;
 
   }
 
-  #headshot img, #library img, #research img{
+  #headshot img, #library img, #research img, #professional img,  #leadership img, #contact img{
     object-fit: cover;
     max-width: 100%;
     height: auto;
@@ -73,12 +64,12 @@
     margin-top: 20px;
   }
 
-  #eduinfo, #researchinfo{
+  #eduinfo, #researchinfo, #professonalinfo, #leadershipinfo{
     grid-row: 2/span 1;
   }
-  #researchinfo p{
+  #researchinfo p, #professionalinfo p, #leadershipinfo p{
     text-align: left;
-    margin-top: 10px;
+    margin-top: 2px;
     font-size: 15px;
   }
   ul {
@@ -97,6 +88,7 @@
   }
   #edufooter{
     grid-row: 4/span 1;
+    margin-top: 15px;
   }
   /* Style the navigation menu */
   .menuButton {

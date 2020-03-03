@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Samantha Russel</title>
+    <link rel="shortcut icon" type="image/png" href="images/piggy-removebg.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+        function drop() {
+            document.getElementById("menu").classList.toggle("show");
+            }
+
+            // Close the dropdown menu if the user clicks outside of it
+            window.onclick = function(event) {
+            if (!event.target.matches('.menuButton')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+                }
+            }
+            }
+    </script>
+</head>
+<body>
+    <main>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <div class="educontainer">	
+
+
+    <div class="dropdown">
+        <button onclick="drop()" class="menuButton"></button>
+        <div id="menu" class="dropdown-content">
+            <a href="index.html">About Me</a>
+            <a href="education.html">Education</a>
+            <a href="research.html">Research</a>
+            <a href="professional.html">Professional</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+      </div>
+
+    <header>
+        <h1>Samantha Russel</h1>
+    </header>
+
+    <div id="leadership">
+    <img src="images/leadership.jpg" alt = "A team of hikers climbing a mountain">
+    </div>
+
+    <div id="leadershipinfo">
+        <h1>Girls Who Code</h1>
+        <p>As a chair, I aid in running the University of Michigan branch of Girls Who Code, an organization 
+            aimed at supporting and increasing the number of women in tech fields through hosting coding 
+            workshops, social events, and community outreach programs.
+        </p>
+        <br>
+        <h1>Global Scholars Program</h1>
+        <p>
+            As a collaborative group facilitator for the Global Scholars Program, I lead a group of underclassmen 
+            to help them complete an internship with an international organization, facilitating their development
+            of professional skills as well as a better understanding of global social justice.
+        </p>
+        <br>
+        <h1>University Unions League Board of Governors</h1>
+        <p>
+            As the chair of the board, I lead a group of students, staff, and alumni to discuss and reach consensus 
+            about decisions regarding a historical university union, including renovations, policy change, and 
+            scholarship distribution.
+         </p>
+        
+    </div>
+
+
+
+<footer id="edufooter">
+    <p>Samantha Russel &copy; 2020</p>
+</footer>
+
+</div>
+</main>
+</body>
+
+</html>
+
