@@ -6,7 +6,7 @@
   transition: top 1s ease-out;
   z-index: 1;
   position: absolute;
-  margin: -40px;
+  margin: -1000000px;
 }
 .skip a:focus{
   margin: 0px;
@@ -34,10 +34,16 @@
 
   }
 
-  #library, #research, #professional, #contact{
+  #library, #research, #professional, #contactinfo{
     grid-column: 1/span 1;
     grid-row: 1/span 1;
 
+  }
+  
+  #contactinfo{
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 50px;
   }
 
   #headshot img, #library img, #research img, #professional img,  #leadership img, #contact img{
@@ -72,6 +78,12 @@
     margin-top: 2px;
     font-size: 15px;
   }
+
+  #contactinfo h1{
+    font-size: 100px;
+    font-family: "Cabin Sketch", cursive;
+  }
+
   ul {
     text-align: left;
   }
@@ -90,8 +102,10 @@
     grid-row: 4/span 1;
     margin-top: 15px;
   }
+
   /* Style the navigation menu */
-  .menuButton {
+  /* sources: */
+  .menuButton,  .contactMenuButton{
     background-image: url("../images/yellow-menu.png");
     object-fit: cover;
     width: 100px;
@@ -104,6 +118,9 @@
     cursor: pointer;
 
   }  
+  .contactMenuButton{
+    border: 5px solid black;
+  }
   .menuButton:hover, .menuButton:focus {
     background-color: #2980B9;
   }
@@ -136,7 +153,7 @@
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-  @media all and (min-width: 700px){
+@media all and (min-width: 700px){
     .container{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 5fr 1fr;
@@ -157,17 +174,18 @@
       grid-row: 2/span 1;
       background-size: 100% 100%;
     }
+    .dropdown {
 
+      right: 0;
 
-  }
+    }
 
-  @media all and (min-width: 1200px){
-    .container{
+@media all and (min-width: 1200px){
+  .container{
       
-      }
-    #headshot{
-
-      }
-
+  }
+  #headshot{
 
   }
+
+}
