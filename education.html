@@ -30,16 +30,17 @@
     </script>
 </head>
 <body>
-    <main>
-    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+
+    <a class = "skip" href="#skip">Skip to Main Content</a>
     <div class="educontainer">	
 
 
+    <header>
         <nav class="dropdown">
-            <button onclick="drop()" class="menuButton"></button>
+            <button onclick="drop()" class="menuButton" title="menu"></button>
             <div id="menu" class="dropdown-content">
               <a href="index.html">About Me</a>
-              <a href="education.html">Education</a>
+              <a class = "current" href="education.html">Education</a>
               <a href="research.html">Research</a>
               <a href="professional.html">Professional</a>
               <a href="leadership.html">Leadership</a>
@@ -57,16 +58,18 @@
             </ul>
         </nav>
 
-    <header>
         <h1>Samantha Russel</h1>
-    </header>
+
 
     <div id="library">
     <img src="images/library.jpg" alt = "The University of Michigan law library">
     </div>
+</header>
 
+<main id = 'skip'>
     <div id="eduinfo">
         <p>
+            <h1>My Education</h1>
             Growing up, I attended Greenville Public Schools, graduating in 2017. 
             At the University of Michigan, I study Information in their School of Information and minor in Applied Statistics, maintaining a 3.925 GPA. 
         </p>

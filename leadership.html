@@ -31,19 +31,20 @@
     </script>
 </head>
 <body>
-    <main>
-    <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <div class="educontainer">	
+
+        <a class = "skip" href="#skip">Skip to Main Content</a>
+        <div class="educontainer">	
 
 
+    <header>
         <nav class="dropdown">
-            <button onclick="drop()" class="menuButton"></button>
+            <button onclick="drop()" class="menuButton" title="menu"></button>
             <div id="menu" class="dropdown-content">
               <a href="index.html">About Me</a>
               <a href="education.html">Education</a>
               <a href="research.html">Research</a>
               <a href="professional.html">Professional</a>
-              <a href="leadership.html">Leadership</a>
+              <a class = "current" href="leadership.html">Leadership</a>
               <a href="contact.html">Contact Me</a>
             </div>
         </nav>
@@ -58,14 +59,15 @@
             </ul>
         </nav>
 
-    <header>
         <h1>Samantha Russel</h1>
-    </header>
+
 
     <div id="leadership">
     <img src="images/leadership.jpg" alt = "A team of hikers climbing a mountain">
     </div>
+</header>
 
+<main id = 'skip'>
     <div id="leadershipinfo">
         <h1>Girls Who Code</h1>
         <p> I have been a part of Girls Who Code since September 2018, first as a general member and later
