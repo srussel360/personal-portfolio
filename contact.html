@@ -70,15 +70,17 @@
         
     </div> -->
 
-        <div class="flipCard">   
-                <div class= "card flipFront">
-                    <h1>Contact Me!</h1>
+        <div class="flipCard" tabindex="0"> 
+            <div class="flipInner">  
+                <div class= "flipFront">
+                    <h1 class = retroshadow> Contact Me!</h1>
                 </div>
-                <div class="card flipBack">
+                <div class="flipBack">
                     <p> Email: srussel@umich.edu</p>
                     <p> Phone: (989) 291-7110</p>
                     <p> LinkedIn: <a href="https://www.linkedin.com/in/samantha-russel-430049154/">https://www.linkedin.com/in/samantha-russel-430049154/</a> </p>
                 </div>
+            </div>
         </div>
     </div>
     <!-- gallery
@@ -96,10 +98,23 @@
         <img src="/images/Turtle.jpg" /> -->
     </div>
 
+    <div id = "form">
+        <form form action="https://formspree.io/mdodoqwb" method="POST">
+            <fieldset>
+            <legend>Submit a Contact Form</legend>
+            <div class = "contact">
+                <label for ="name">Name:</label><input type="text" id ="name" name="name"required/> 
+                <label for ="eaddr">Email Address:</label><input type="text" id="eaddr" name ="eaddr" required/> 
+                <label for ="abt">What's up?:</label><textarea id = "abt"></textarea>
+                <input type="submit" value=" Submit Form"/>
+             </div>
+            </fieldset>
+        </form>
+    </div>
 
-<footer id="edufooter">
-    <p>Samantha Russel &copy; 2020</p>
-</footer>
+    <footer id="edufooter">
+        <p>Samantha Russel &copy; 2020</p>
+    </footer>
 
 
 </main>

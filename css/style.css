@@ -19,14 +19,21 @@ a.skip:focus{
 .container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr 2fr 2fr 1fr 0.5fr;
+    grid-template-rows: 4fr 2fr 0.5fr;
     overflow: hidden;
   
   }
+  .educontainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 2fr 0.5fr;
+    overflow: hidden;
+  }
+
   .contactcontainer{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 1.5fr 0.5fr;
+    grid-template-rows: 1fr 4fr 6fr 2fr .5fr;
     overflow: hidden;
   
   }
@@ -40,15 +47,24 @@ a.skip:focus{
     display: none;
   }
 
-  #headshot{
-    grid-column: 1/span 1;
-    grid-row: 1/span 2;
+  #bio h1{
+    animation: fadein 5s 1;
+  }
 
+  @keyframes fadein {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .#bio h1 {
+      animation: none;
+    }
   }
 
   #library, #research, #professional {
     grid-column: 1/span 1;
-    grid-row: 2/span 1;
+    grid-row: 1/span 1;
 
   }
 
@@ -72,11 +88,14 @@ a.skip:focus{
     line-height: 1.6;
   }
 
-  #bio, #eduinfo{
+  #bio{
+    grid-row: 2/span 1;
+  }
+
+  #eduinfo{
     text-align: center;
     margin-top: 20px;
   }
-
   #eduinfo, #researchinfo, #professonalinfo, #leadershipinfo{
     grid-row: 3/span 1;
   }
@@ -93,6 +112,7 @@ a.skip:focus{
   footer{
     background-color: black;
     color: white;
+    grid-row: 3/span 1;
   }
 
   footer p{
@@ -101,11 +121,40 @@ a.skip:focus{
     padding: 15px;
   }
   #edufooter{
-    grid-row: 4/span 1;
+    grid-row: 5/span 1;
     margin-top: 15px;
     bottom: 0%;
   }
 
+  #form{
+    grid-row: 4/span 1;
+  }
+  fieldset{
+    border-radius: 10px;
+ }
+ legend{
+    text-align: center;
+    font-variant-caps: small-caps; 
+ }
+ fieldset div{
+    border: 2px solid black;
+    margin: 2%;
+    padding: 1%;
+    border-radius: 5px;
+ }
+ 
+ input:focus{
+    background-color: lightgray;
+    border: 2px solid black;
+ }
+ 
+ .contact{
+    display: grid;
+ 
+    grid-template-columns: auto 1fr;
+    grid-row-gap: 5px;
+ 
+ }
   /* Navigation menu */
   /* sources: 
   */
@@ -223,48 +272,65 @@ Sources: https://www.w3schools.com/howto/howto_css_flip_card.asp
 https://3dtransforms.desandro.com/card-flip*/
   
 #contactinfo{
-  margin-top: 100px;
+  margin-top: 10px;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   grid-row: 2/span 1;
   grid-column: 1/span 1;
-}
-#contactinfo {
-  width: 200px;
-  height: 260px;
-  perspective: 600px;
 }
 #contactinfo h1{
   font-size: 80px;
   font-family: "Cabin Sketch", cursive;
+  text-rendering: optimizeLegibility;
+
 }
+h1.retroshadow {
+  letter-spacing: .05em;
+  text-shadow: 
+    4px 4px 0px #d5d5d5, 
+    7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
 .flipCard {
+  grid-row: 2/span 1;
+  grid-column: 1/span 1;
+  background-color: transparent;
+  width: 1fr;
+  height: 1fr;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flipInner {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
-  transition: transform 1s;
+  text-align: center;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-.card {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  backface-visibility: hidden;
-}
-.flipFront {
-  background: red;
-}
 
-.flipBack {
-  background: blue;
-  transform: rotateY( 180deg );
-}
-
-.flipCard.is-flipped {
+.flipCard:hover .flipInner, .flipCard:focus .flipInner {
   transform: rotateY(180deg);
 }
 
+.flipFront, .flipBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
 
+.flipFront {
+  background-color: #bbb;
+  color: black;
+}
+
+.flipBack {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
 
 
 
