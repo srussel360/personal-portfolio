@@ -130,7 +130,8 @@ a.skip:focus{
   }
 
   #form{
-    grid-row: 4/span 1;
+    position: fixed;
+    bottom: 20px;
   }
   fieldset{
     border-radius: 10px;
@@ -267,9 +268,7 @@ http://css3.bradshawenterprises.com/cfimg/ */
   animation-delay: 0s;
 }
 
-#gallery {
-  grid-row: 3/span 1;
-  grid-column: 1/span 1;
+#gallery{
 }
 
 #gallery img{
@@ -337,7 +336,7 @@ h1.retroshadow {
 }
 
 .flipFront, .flipBack {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
@@ -355,7 +354,14 @@ h1.retroshadow {
   transform: rotateY(180deg);
 }
 
+#gallery {
 
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 
 
 
