@@ -159,7 +159,7 @@ a.skip:focus{
   https://www.w3schools.com/howto/howto_js_dropdown.asp
   */
   .menuButton,  .contactMenuButton{
-    background-image: url("../images/yellow-menu.png");
+    background-image: url("../images/yellow-menu.PNG");
     object-fit: cover;
     width: 100px;
     height: 70px;
