@@ -155,7 +155,8 @@ a.skip:focus{
  
  }
   /* Navigation menu */
-  /* sources: 
+  /* sources: https://www.w3schools.com/howto/howto_css_menu_icon.asp 
+  https://www.w3schools.com/howto/howto_js_dropdown.asp
   */
   .menuButton,  .contactMenuButton{
     background-image: url("../images/yellow-menu.png");
