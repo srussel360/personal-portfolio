@@ -408,11 +408,12 @@ sources: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_parallax 
 
     .bar ul{
       display: flex;
-      padding: 10px
+      padding: 10px;
     }
 
     .bar li{
       margin: 10px;
+      font-size: 14px;
     }
 
     .bar .current {
@@ -501,8 +502,12 @@ sources: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_parallax 
     grid-row: 1/ span 1;
     grid-column: 2/span 1;
   }
+  .bar li{
+    font-size: 20px;
+  }
   #eduinfo {
     flex-direction: column;
+
   }
   #gallery{
     margin-bottom: -200px;
@@ -518,7 +523,9 @@ sources: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_parallax 
   header{
     grid-column: 1/span 1;
     grid-row: 1/ span 1;
-
+  }
+  #library img{
+    margin-top: 100px;
   }
   .bar ul{
     flex-direction: column;
