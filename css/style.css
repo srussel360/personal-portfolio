@@ -316,6 +316,7 @@ h1.retroshadow {
   width: 1fr;
   height: 1fr;
   perspective: 1000px; 
+  color: black;
 }
 
 .flipInner {
@@ -325,6 +326,7 @@ h1.retroshadow {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  color: black;
 }
 
 .flipCard:hover .flipInner, .flipCard:focus .flipInner {
@@ -346,7 +348,7 @@ h1.retroshadow {
 
 .flipBack {
   background-color: dodgerblue;
-  color: white;
+  color: black;
   transform: rotateY(180deg);
 }
 
