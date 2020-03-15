@@ -3,15 +3,15 @@
 }
 
 a.skip {
-  background: white;
+  background: black;
+  color: white;
   left: 0;
-  padding: 6px;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
+  padding: 5px;
   z-index: 20;
   position: absolute;
   margin: -1000000px;
 }
+
 a.skip:focus{
   margin: 0px;
 }
@@ -262,9 +262,6 @@ http://css3.bradshawenterprises.com/cfimg/ */
   animation-delay: 0s;
 }
 
-#gallery{
-}
-
 #gallery img{
   /* max-width: 80%;
   max-height: 80%; */
@@ -281,6 +278,9 @@ http://css3.bradshawenterprises.com/cfimg/ */
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-duration: 18s;
+
+  margin-bottom: 100px;
+
 }
 
 /* Flipcard
@@ -358,14 +358,26 @@ footer {
   bottom: 0;
   width: 100%;
 }
-#galleryHeader{
+#galleryHeader, #piggyHeader{
   display: block;
   text-align: center;
   font-size: 80px;
   font-family: "Cabin Sketch", cursive;
   text-rendering: optimizeLegibility;
+  margin-top: 50px;
 }
-
+/* Parallex effect
+sources: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_parallax */
+.parallax {
+  margin-top: 50px;
+  background-image: url("../images/parallax.JPG");
+  min-height: 1000px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* transform: rotate(90deg); */
+}
 
 
 @media all and (min-width: 700px){
@@ -435,8 +447,6 @@ footer {
     }
     #gallery img{
       right: 0;
-      left: 100;
-      top: 5;
       max-height: 60%; 
       max-width: 80%;
     }
@@ -487,6 +497,16 @@ footer {
     grid-column: 2/span 2;
     grid-template-rows: 1fr;
   }
+  main {
+    grid-row: 1/ span 1;
+    grid-column: 2/span 1;
+  }
+  #eduinfo {
+    flex-direction: column;
+  }
+  #gallery{
+    margin-bottom: -200px;
+  }
   .container{
     grid-template-columns: 1fr 2fr 2fr;
     grid-template-rows: 1fr;
@@ -504,5 +524,12 @@ footer {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  #form {
+    margin-bottom: 200px;
+  }
+  header{
+    display: flex;
+    flex-direction: row;
   }
 }
